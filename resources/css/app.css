@@ -636,3 +636,37 @@ body {
 
     font-weight: bold;
 }
+
+.counter-box {
+    padding: 40px;
+    text-align: center;
+    background-color: #191b28;
+    border: 1px solid #353249;
+    border-radius: 10px;
+}
+
+.counter-number {
+    margin: 25px 0;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.counter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.counter-button {
+    min-width: 80px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #865dff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.counter-button:hover {
+    background-color: #ab8dff;
+}

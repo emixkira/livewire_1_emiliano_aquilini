@@ -25,23 +25,7 @@
                 <p class="hero-text">
                     ScreenRate è uno spazio dedicato
                     alle recensioni di film e serie TV.
-                    Scopri nuovi titoli e condividi
-                    la tua opinione.
                 </p>
-
-                <a
-                    href="{{ route('articles.index') }}"
-                    class="btn btn-screen me-2"
-                >
-                    Esplora recensioni
-                </a>
-
-                <a
-                    href="{{ route('articles.create') }}"
-                    class="btn btn-outline-light"
-                >
-                    Scrivi recensione
-                </a>
 
             </div>
 
@@ -51,38 +35,23 @@
 
 </header>
 
-@if ($articles->count() > 0)
 
 <section class="py-5">
 
     <div class="container">
 
-        <p class="section-label">
-            Ultime pubblicazioni
-        </p>
+        <div class="row justify-content-center">
 
-        <h2 class="mb-4">
-            Recensioni recenti
-        </h2>
+            <div class="col-12 col-md-8 col-lg-6">
 
-        <div class="row g-4">
+                <livewire:counter />
 
-            @foreach ($articles as $article)
-
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <x-article-card :article="$article" />
-
-                </div>
-
-            @endforeach
+            </div>
 
         </div>
 
     </div>
 
 </section>
-
-@endif
 
 @endsection

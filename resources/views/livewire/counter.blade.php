@@ -1,19 +1,14 @@
-<div class="community-rating">
+<div class="counter-box">
 
     <p class="section-label">
-        Community
+        Laravel Livewire
     </p>
 
-    <h2>
-        Valutazione degli utenti
+    <h2 class="mb-3">
+        Counter
     </h2>
 
-    <p class="counter-description">
-        Modifica il punteggio assegnato dalla community
-        a questo film o serie TV.
-    </p>
-
-    <div class="community-score">
+    <div class="counter-number">
         {{ $count }}
     </div>
 
@@ -21,30 +16,16 @@
 
         <button
             wire:click="decrement"
-            class="counter-button counter-red"
+            class="counter-button"
         >
             -1
         </button>
 
         <button
             wire:click="increment"
-            class="counter-button counter-green"
+            class="counter-button"
         >
             +1
-        </button>
-
-        <button
-            wire:click="incrementBy(5)"
-            class="counter-button counter-blue"
-        >
-            +5
-        </button>
-
-        <button
-            wire:click="incrementBy(10)"
-            class="counter-button counter-dark"
-        >
-            +10
         </button>
 
     </div>
@@ -53,23 +34,34 @@
 
         <button
             wire:click="decrementBy(5)"
-            class="counter-button counter-outline-red"
+            class="counter-button"
         >
             -5
         </button>
 
         <button
+            wire:click="incrementBy(5)"
+            class="counter-button"
+        >
+            +5
+        </button>
+
+    </div>
+
+    <div class="counter-buttons mt-3">
+
+        <button
             wire:click="decrementBy(10)"
-            class="counter-button counter-outline-dark"
+            class="counter-button"
         >
             -10
         </button>
 
         <button
-            wire:click="resetCounter"
-            class="counter-button counter-reset"
+            wire:click="incrementBy(10)"
+            class="counter-button"
         >
-            Reset
+            +10
         </button>
 
     </div>

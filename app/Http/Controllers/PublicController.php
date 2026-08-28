@@ -2,18 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
-
 class PublicController extends Controller
 {
     public function home()
     {
-        $articles = Article::latest()
-            ->take(3)
-            ->get();
-
-        return view('home', [
-            'articles' => $articles
-        ]);
+        return view('home');
     }
 }
